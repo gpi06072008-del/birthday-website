@@ -4,38 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday 💖</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/birthday-website/style.css">
 </head>
+
 <body>
 
-<audio controls loop>
-    <source src="og/music.mp3" type="audio/mpeg">
+<h1>Happy Birthday My Love 🎂💖</h1>
+
+<!-- IMAGE (Absolute Path) -->
+<img 
+  src="/birthday-website/og/photo.jpg" 
+  alt="Birthday Photo" 
+  width="200"
+  style="border-radius:50%; margin:20px;"
+>
+
+<br>
+
+<!-- MUSIC (Absolute Path) -->
+<audio controls>
+  <source src="/birthday-website/og/music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container">
-    <h1>Happy Birthday My Love 🎂💖</h1>
+<br><br>
 
-    <div class="photo">
-        <img src="og/photo.jpg" alt="Birthday Photo">
-    </div>
+<button onclick="showMessage()">Click Here 🎁</button>
 
-    <p class="message">
-        Meri Jaan 💕 <br>
-        Tu meri duniya hai 🌍 <br>
-        Hamesha aise hi muskurati rehna ✨ <br>
-        I Love You Forever ❤️
-    </p>
-
-    <button onclick="showLove()">Click Here 🎁</button>
-
-    <div id="loveText">
-        You Are My Everything 💍❤️
-    </div>
-</div>
+<p id="hiddenMessage" style="display:none; font-weight:bold; margin-top:20px;">
+You Are My Everything 💍❤️
+</p>
 
 <script>
-function showLove() {
-    document.getElementById("loveText").style.display = "block";
+function showMessage() {
+  document.getElementById("hiddenMessage").style.display = "block";
 }
 </script>
 
